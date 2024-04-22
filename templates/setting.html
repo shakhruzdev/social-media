@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <title>Settings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+
+</head>
+
+<body>
+
+
+<div class="container m-auto">
+
+    <h1 class="text-2xl leading-none text-gray-900 tracking-tight mt-3"> Account Setting </h1>
+
+
+    <div class="grid lg:grid-cols-3 mt-12 gap-8">
+        <div>
+            <h3 class="text-xl mb-2"> Basic</h3>
+            <p></p>
+        </div>
+        <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" placeholder="Your username.." class="shadow-none bg-gray-100">
+                    </div>
+                    <div>
+                        <label for="first_name">First name</label>
+                        <input type="text" name="first_name" placeholder="Your name.." class="shadow-none bg-gray-100">
+                    </div>
+                    <div>
+                        <label for="last_name">Last name</label>
+                        <input type="text" name="last_name" placeholder="Your surname.." class="shadow-none bg-gray-100">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Your email.." class="shadow-none bg-gray-100">
+                    </div>
+                </div>
+                <div class="bg-gray-10 p-6 pt-0 flex justify-end space-x-3">
+                    <button type="reset" class="p-2 px-4 rounded bg-gray-50 text-red-500"> Cancel</button>
+                    <button type="submit" class="button bg-blue-700"> Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Scripts
+   ================================================== -->
+<script src="{% static 'assets/js/tippy.all.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'assets/js/uikit.js' %}"></script>
+<script src="{% static 'assets/js/simplebar.js' %}"></script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+<script src="{% static '../../unpkg.com/ionicons%405.2.3/dist/ionicons.js' %}"></script>
+</body>
+
+</html>
